@@ -1,4 +1,4 @@
-def parseFileByName(fileName):
+def ParseFileByName(fileName):
     with open(fileName) as f:
         content = []
         for line in f:

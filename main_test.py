@@ -2,16 +2,16 @@ import os
 
 import pytest
 
-from main import parseFileByName, WriteSearchedArraysInFile
+from main import ParseFileByName, WriteSearchedArraysInFile
 
 
 def test_parseFileByName_non_empty_file():
     expected_output = [['aboba', 'baobab', 'aboba', 'aboba', 'aboba', 'baobab'], ['baobab', 'baobab']]
-    assert parseFileByName('file.txt') == expected_output
+    assert ParseFileByName('file.txt') == expected_output
 
 def test_parseFileByName_file_not_found():
     with pytest.raises(FileNotFoundError):
-        parseFileByName('nonexistent_file.txt')
+        ParseFileByName('nonexistent_file.txt')
 
 def test_WriteSearchedArraysInFile():
     output_name = 'file2.txt'
