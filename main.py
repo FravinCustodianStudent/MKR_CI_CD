@@ -8,3 +8,11 @@ def parseFileByName(fileName):
         return Exception("file is empty")
     else:
         return content
+def WriteSearchedArraysInFile(fileName,searchedWord,array):
+    with open("file2.txt", "w") as file:
+        for el in array:
+            if searchedWord in el:
+                for elem in el:
+                    file.write(elem + " ")
+                file.write("\n")
+
